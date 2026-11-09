@@ -1,0 +1,424 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "witherutils:block/pole/steel_pole"
+      },
+      "when": {
+        "facingdown": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "witherutils:block/pole/steel_pole"
+      },
+      "when": {
+        "facingdown": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "witherutils:block/pole/steel_foot",
+        "x": 180
+      },
+      "when": {
+        "facingdown": "true",
+        "foot": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "witherutils:block/pole/steel_foot"
+      },
+      "when": {
+        "facingdown": "false",
+        "foot": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "witherutils:block/pole/steel_conn"
+      },
+      "when": {
+        "northconn": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "witherutils:block/pole/steel_conn",
+        "y": 90
+      },
+      "when": {
+        "eastconn": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "witherutils:block/pole/steel_conn",
+        "y": 180
+      },
+      "when": {
+        "southconn": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "witherutils:block/pole/steel_conn",
+        "y": 270
+      },
+      "when": {
+        "westconn": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "witherutils:block/pole/steel_pole"
+      },
+      "when": {
+        "facingdown": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "witherutils:block/pole/steel_pole"
+      },
+      "when": {
+        "facingdown": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "witherutils:block/pole/steel_foot",
+        "x": 180
+      },
+      "when": {
+        "facingdown": "true",
+        "foot": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "witherutils:block/pole/steel_foot"
+      },
+      "when": {
+        "facingdown": "false",
+        "foot": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "witherutils:block/pole/steel_conn"
+      },
+      "when": {
+        "northconn": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "witherutils:block/pole/steel_conn",
+        "y": 90
+      },
+      "when": {
+        "eastconn": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "witherutils:block/pole/steel_conn",
+        "y": 180
+      },
+      "when": {
+        "southconn": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "witherutils:block/pole/steel_conn",
+        "y": 270
+      },
+      "when": {
+        "westconn": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "witherutils:block/pole/steel_pole"
+      },
+      "when": {
+        "facingdown": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "witherutils:block/pole/steel_pole"
+      },
+      "when": {
+        "facingdown": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "witherutils:block/pole/steel_foot",
+        "x": 180
+      },
+      "when": {
+        "facingdown": "true",
+        "foot": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "witherutils:block/pole/steel_foot"
+      },
+      "when": {
+        "facingdown": "false",
+        "foot": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "witherutils:block/pole/steel_conn"
+      },
+      "when": {
+        "northconn": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "witherutils:block/pole/steel_conn",
+        "y": 90
+      },
+      "when": {
+        "eastconn": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "witherutils:block/pole/steel_conn",
+        "y": 180
+      },
+      "when": {
+        "southconn": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "witherutils:block/pole/steel_conn",
+        "y": 270
+      },
+      "when": {
+        "westconn": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "witherutils:block/pole/steel_pole"
+      },
+      "when": {
+        "facingdown": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "witherutils:block/pole/steel_pole"
+      },
+      "when": {
+        "facingdown": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "witherutils:block/pole/steel_foot",
+        "x": 180
+      },
+      "when": {
+        "facingdown": "true",
+        "foot": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "witherutils:block/pole/steel_foot"
+      },
+      "when": {
+        "facingdown": "false",
+        "foot": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "witherutils:block/pole/steel_conn"
+      },
+      "when": {
+        "northconn": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "witherutils:block/pole/steel_conn",
+        "y": 90
+      },
+      "when": {
+        "eastconn": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "witherutils:block/pole/steel_conn",
+        "y": 180
+      },
+      "when": {
+        "southconn": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "witherutils:block/pole/steel_conn",
+        "y": 270
+      },
+      "when": {
+        "westconn": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "witherutils:block/pole/steel_pole"
+      },
+      "when": {
+        "facingdown": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "witherutils:block/pole/steel_pole"
+      },
+      "when": {
+        "facingdown": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "witherutils:block/pole/steel_foot",
+        "x": 180
+      },
+      "when": {
+        "facingdown": "true",
+        "foot": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "witherutils:block/pole/steel_foot"
+      },
+      "when": {
+        "facingdown": "false",
+        "foot": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "witherutils:block/pole/steel_conn"
+      },
+      "when": {
+        "northconn": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "witherutils:block/pole/steel_conn",
+        "y": 90
+      },
+      "when": {
+        "eastconn": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "witherutils:block/pole/steel_conn",
+        "y": 180
+      },
+      "when": {
+        "southconn": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "witherutils:block/pole/steel_conn",
+        "y": 270
+      },
+      "when": {
+        "westconn": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "witherutils:block/pole/steel_pole"
+      },
+      "when": {
+        "facingdown": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "witherutils:block/pole/steel_pole"
+      },
+      "when": {
+        "facingdown": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "witherutils:block/pole/steel_foot",
+        "x": 180
+      },
+      "when": {
+        "facingdown": "true",
+        "foot": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "witherutils:block/pole/steel_foot"
+      },
+      "when": {
+        "facingdown": "false",
+        "foot": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "witherutils:block/pole/steel_conn"
+      },
+      "when": {
+        "northconn": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "witherutils:block/pole/steel_conn",
+        "y": 90
+      },
+      "when": {
+        "eastconn": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "witherutils:block/pole/steel_conn",
+        "y": 180
+      },
+      "when": {
+        "southconn": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "witherutils:block/pole/steel_conn",
+        "y": 270
+      },
+      "when": {
+        "westconn": "true"
+      }
+    }
+  ]
+}

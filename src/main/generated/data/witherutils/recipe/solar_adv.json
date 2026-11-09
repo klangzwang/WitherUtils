@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "witherutils:soulbank_adv"
+    },
+    "C": {
+      "item": "witherutils:solar_basic"
+    },
+    "G": {
+      "item": "minecraft:glass_pane"
+    }
+  },
+  "pattern": [
+    "   ",
+    "GGG",
+    "ACA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "witherutils:solar_adv"
+  }
+}

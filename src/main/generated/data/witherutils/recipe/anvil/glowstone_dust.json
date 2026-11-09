@@ -1,0 +1,16 @@
+{
+  "type": "witherutils:anvil",
+  "bonus": 0,
+  "count": 4,
+  "hitcounter": 1,
+  "input": {
+    "item": "minecraft:glowstone"
+  },
+  "output": {
+    "count": 1,
+    "id": "minecraft:glowstone_dust"
+  },
+  "sound": {
+    "sound_id": "witherutils:hammerhit"
+  }
+}

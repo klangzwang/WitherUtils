@@ -1,0 +1,50 @@
+{
+  "variants": {
+    "facing=down,formed=false": {
+      "model": "witherutils:block/rack/terminal/terminal",
+      "x": 270
+    },
+    "facing=down,formed=true": {
+      "model": "witherutils:block/rack/terminal/terminal_formed",
+      "x": 270
+    },
+    "facing=east,formed=false": {
+      "model": "witherutils:block/rack/terminal/terminal",
+      "y": 90
+    },
+    "facing=east,formed=true": {
+      "model": "witherutils:block/rack/terminal/terminal_formed",
+      "y": 90
+    },
+    "facing=north,formed=false": {
+      "model": "witherutils:block/rack/terminal/terminal"
+    },
+    "facing=north,formed=true": {
+      "model": "witherutils:block/rack/terminal/terminal_formed"
+    },
+    "facing=south,formed=false": {
+      "model": "witherutils:block/rack/terminal/terminal",
+      "y": 180
+    },
+    "facing=south,formed=true": {
+      "model": "witherutils:block/rack/terminal/terminal_formed",
+      "y": 180
+    },
+    "facing=up,formed=false": {
+      "model": "witherutils:block/rack/terminal/terminal",
+      "x": 90
+    },
+    "facing=up,formed=true": {
+      "model": "witherutils:block/rack/terminal/terminal_formed",
+      "x": 90
+    },
+    "facing=west,formed=false": {
+      "model": "witherutils:block/rack/terminal/terminal",
+      "y": 270
+    },
+    "facing=west,formed=true": {
+      "model": "witherutils:block/rack/terminal/terminal_formed",
+      "y": 270
+    }
+  }
+}

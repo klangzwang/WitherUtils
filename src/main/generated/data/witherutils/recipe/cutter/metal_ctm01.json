@@ -1,0 +1,14 @@
+{
+  "type": "witherutils:cutter",
+  "damage": 0.0,
+  "input": {
+    "item": "minecraft:iron_block"
+  },
+  "output": {
+    "count": 24,
+    "id": "witherutils:metal_ctm01"
+  },
+  "sound": {
+    "sound_id": "witherutils:hammerhit"
+  }
+}

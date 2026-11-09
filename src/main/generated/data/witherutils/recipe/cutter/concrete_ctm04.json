@@ -1,0 +1,14 @@
+{
+  "type": "witherutils:cutter",
+  "damage": 0.0,
+  "input": {
+    "item": "minecraft:gray_concrete"
+  },
+  "output": {
+    "count": 1,
+    "id": "witherutils:concrete_ctm04"
+  },
+  "sound": {
+    "sound_id": "witherutils:hammerhit"
+  }
+}

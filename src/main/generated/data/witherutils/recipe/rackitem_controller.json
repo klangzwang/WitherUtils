@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "witherutils:withersteel_case"
+    },
+    "D": {
+      "item": "minecraft:diamond_block"
+    },
+    "E": {
+      "item": "minecraft:emerald"
+    },
+    "T": {
+      "item": "minecraft:chest"
+    }
+  },
+  "pattern": [
+    "EDE",
+    "TCT",
+    "EDE"
+  ],
+  "result": {
+    "count": 1,
+    "id": "witherutils:rackitem_controller"
+  }
+}

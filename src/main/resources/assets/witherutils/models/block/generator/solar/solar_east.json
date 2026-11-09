@@ -1,9 +1,9 @@
 {
 	"credit": "witherutils",
 	"textures": {
-		"1": "witherutils:block/machine/machine06",
-		"particle": "witherutils:block/machine/machine34",
-		"mesh": "witherutils:block/machine/machine34"
+		"1": "witherutils:block/shared/full16",
+		"particle": "witherutils:block/shared/full11",
+		"mesh": "witherutils:block/shared/full11"
 	},
 	"elements": [
 		{

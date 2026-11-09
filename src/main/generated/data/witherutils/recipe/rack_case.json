@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "witherutils:withersteel_case"
+    },
+    "I": {
+      "item": "witherutils:withersteel_ingot"
+    },
+    "X": {
+      "item": "minecraft:iron_bars"
+    }
+  },
+  "pattern": [
+    "IXI",
+    "XCX",
+    "IXI"
+  ],
+  "result": {
+    "count": 1,
+    "id": "witherutils:rack_case"
+  }
+}

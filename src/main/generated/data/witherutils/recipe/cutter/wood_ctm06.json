@@ -1,0 +1,14 @@
+{
+  "type": "witherutils:cutter",
+  "damage": 0.0,
+  "input": {
+    "item": "minecraft:oak_planks"
+  },
+  "output": {
+    "count": 1,
+    "id": "witherutils:wood_ctm06"
+  },
+  "sound": {
+    "sound_id": "minecraft:block.wood.place"
+  }
+}

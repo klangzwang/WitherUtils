@@ -1,0 +1,16 @@
+{
+  "type": "witherutils:anvil",
+  "bonus": 0,
+  "count": 1,
+  "hitcounter": 6,
+  "input": {
+    "item": "witherutils:withersteel_plate"
+  },
+  "output": {
+    "count": 1,
+    "id": "witherutils:withersteel_gear"
+  },
+  "sound": {
+    "sound_id": "witherutils:hammerhit"
+  }
+}

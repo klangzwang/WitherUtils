@@ -2,7 +2,7 @@
 	"credit": "Made with Blockbench",
 	"parent": "block/block",
 	"textures": {
-		"1": "witherutils:block/glass02",
+		"1": "witherutils:block/glass/glass02",
 		"3": "witherutils:block/reservoir",
 		"particle": "witherutils:block/reservoir"
 	},

@@ -1,0 +1,5 @@
+{
+  "parent": "minecraft:item/generated",
+  "class": "geni.witherutils.client.item.render.RenderModularRod",
+  "loader": "codechickenlib:class"
+}

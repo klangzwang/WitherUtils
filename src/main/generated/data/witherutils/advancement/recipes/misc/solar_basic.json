@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_solarcase": {
+      "conditions": {
+        "items": [
+          {
+            "items": "witherutils:solar_case"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "witherutils:solar_basic"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_solarcase"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "witherutils:solar_basic"
+    ]
+  }
+}

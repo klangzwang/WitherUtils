@@ -1,40 +1,32 @@
-license="GNU GPLv3"
 modLoader="javafml"
-loaderVersion="${loader_version_range}"
-issueTrackerURL="https://github.com/klangzwang/WitherUtils/issues"
-displayURL="https://www.curseforge.com/minecraft/mc-mods/witherutils"
-logoFile="witherutils.png"
-credits=""
-authors="klangzwang, helgenius"
+loaderVersion="[2,)"
+license="TANKGIRLIT"
+
+[[mixins]]
+config="mixins.witherutils.json"
 
 [[mods]]
 	modId="witherutils"
-    version="${mod_version}"
 	displayName="WitherUtils"
-	description='''
-When working at Technical Ideas '''
-
+	version="${mod_version}"
+	authors="klangzwang, helgenius"
+	description=''''''
+	logoFile="witherutils.png"
 [[dependencies.witherutils]]
-    modId="neoforge" #mandatory
-    type="required" #mandatory
-    versionRange="${neo_version_range}" #mandatory
-    ordering="NONE"
-    side="BOTH"
+	modId="neoforge"
+	type="required"
+	versionRange="[${neo_version},)"
+	ordering="NONE"
+	side="BOTH"
 [[dependencies.witherutils]]
-    modId="minecraft"
-    type="required"
-    versionRange="${minecraft_version_range}"
-    ordering="NONE"
-    side="BOTH"
+	modId="minecraft"
+	type="required"
+	versionRange="[1.21.1]"
+	ordering="NONE"
+	side="BOTH"
 [[dependencies.witherutils]]
-    modId="jei"
-    type="optional"
-    versionRange="[19.0.0,)"
-    ordering="NONE"
-    side="BOTH"
-
-[[accessTransformers]]
-	file="META-INF/accesstransformer.cfg"
-
-[[mixins]]
-    config = "mixins.witherutils.json"
+	modId="codechickenlib"
+	type="required"
+	versionRange="[4.6.1.529]"
+	ordering="NONE"
+	side="BOTH"

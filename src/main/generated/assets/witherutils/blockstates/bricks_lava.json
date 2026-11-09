@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "witherutils:block/bricks/bricks_lava_off"
+    },
+    "lit=true": {
+      "model": "witherutils:block/bricks/bricks_lava_on"
+    }
+  }
+}

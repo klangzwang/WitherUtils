@@ -1,7 +1,0 @@
-{
-    "variants":
-    {
-		"lit=false":	{ "model": "witherutils:block/collector/collector"},
-		"lit=true":		{ "model": "witherutils:block/collector/collector_on" }
-    }
-}

@@ -1,0 +1,16 @@
+{
+  "type": "witherutils:anvil",
+  "bonus": 1,
+  "count": 8,
+  "hitcounter": 3,
+  "input": {
+    "item": "minecraft:chest"
+  },
+  "output": {
+    "count": 1,
+    "id": "minecraft:oak_planks"
+  },
+  "sound": {
+    "sound_id": "witherutils:hammerhit"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "witherutils:cutter",
+  "damage": 0.0,
+  "input": {
+    "tag": "minecraft:acacia_logs"
+  },
+  "output": {
+    "count": 1,
+    "id": "minecraft:acacia_planks"
+  },
+  "sound": {
+    "sound_id": "minecraft:block.wood.hit"
+  }
+}

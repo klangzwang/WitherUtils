@@ -1,40 +1,41 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"1": "witherutils:block/emissive/blue"
+		"3": "witherutils:block/emissive/blue",
+		"particle": "witherutils:block/entity/dryhead"
 	},
 	"elements": [
 		{
-			"from": [5.775, 3.4, 3.95],
-			"to": [6.3, 4.375, 4.25],
-			"rotation": {"angle": 0, "axis": "y", "origin": [6, 8, 4]},
+			"from": [5.775, 6.4, 3.95],
+			"to": [6.3, 7.375, 4.25],
+			"rotation": {"angle": 0, "axis": "y", "origin": [6.0375, 6.8875, 4.1]},
 			"faces": {
-				"north": {"uv": [0, 0, 16, 16], "texture": "#1"},
-				"east": {"uv": [0, 0, 16, 16], "texture": "#1"},
-				"west": {"uv": [0, 0, 16, 16], "texture": "#1"},
-				"up": {"uv": [0, 0, 16, 16], "texture": "#1"},
-				"down": {"uv": [0, 0, 16, 16], "texture": "#1"}
+				"north": {"uv": [0, 0, 16, 16], "texture": "#3"},
+				"east": {"uv": [0, 0, 16, 16], "texture": "#3"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#3"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#3"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#3"}
 			}
 		},
 		{
-			"from": [9.675, 3.4, 3.95],
-			"to": [10.2, 4.375, 4.25],
-			"rotation": {"angle": 0, "axis": "y", "origin": [6, 8, 4]},
+			"from": [9.675, 6.4, 3.95],
+			"to": [10.2, 7.375, 4.25],
+			"rotation": {"angle": 0, "axis": "y", "origin": [9.9375, 6.8875, 4.1]},
 			"faces": {
-				"north": {"uv": [0, 0, 16, 16], "texture": "#1"},
-				"east": {"uv": [0, 0, 16, 16], "texture": "#1"},
-				"west": {"uv": [0, 0, 16, 16], "texture": "#1"},
-				"up": {"uv": [0, 0, 16, 16], "texture": "#1"},
-				"down": {"uv": [0, 0, 16, 16], "texture": "#1"}
+				"north": {"uv": [0, 0, 16, 16], "texture": "#3"},
+				"east": {"uv": [0, 0, 16, 16], "texture": "#3"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#3"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#3"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#3"}
 			}
 		}
 	],
 	"groups": [
 		{
-			"name": "group",
+			"name": "eyes",
 			"origin": [6, 8, 4],
+			"scope": 0,
 			"color": 0,
-			"nbt": "{}",
 			"children": [0, 1]
 		}
 	]

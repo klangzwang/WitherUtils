@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "witherutils:solar_adv"
+    },
+    "G": {
+      "item": "minecraft:glass_pane"
+    },
+    "U": {
+      "item": "witherutils:soulbank_ultra"
+    }
+  },
+  "pattern": [
+    "   ",
+    "GGG",
+    "UCU"
+  ],
+  "result": {
+    "count": 1,
+    "id": "witherutils:solar_ultra"
+  }
+}

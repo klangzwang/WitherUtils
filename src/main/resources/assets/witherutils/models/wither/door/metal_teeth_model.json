@@ -1,6 +1,0 @@
-{
-	"loader": "neoforge:obj",
-	"flip_v": true,
-	"emissive_ambient": false,
-	"model" : "witherutils:models/wither/door/mdoor_teeth.obj"
-}

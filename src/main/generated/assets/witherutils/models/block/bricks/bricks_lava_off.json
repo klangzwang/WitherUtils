@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "witherutils:block/bricks/bricks_dark"
+  }
+}

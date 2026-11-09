@@ -1,0 +1,76 @@
+{
+  "variants": {
+    "mbstate=controller": {
+      "model": "witherutils:block/rack/casing/case_null"
+    },
+    "mbstate=none": {
+      "model": "witherutils:block/rack/casing/case_none"
+    },
+    "mbstate=xedge": {
+      "model": "witherutils:block/rack/casing/case_null"
+    },
+    "mbstate=xmax_center": {
+      "model": "witherutils:block/rack/casing/case_null"
+    },
+    "mbstate=xmax_zmax_hi": {
+      "model": "witherutils:block/rack/casing/case_null"
+    },
+    "mbstate=xmax_zmax_lo": {
+      "model": "witherutils:block/rack/casing/case_null"
+    },
+    "mbstate=xmax_zmax_yedge": {
+      "model": "witherutils:block/rack/casing/case_corner",
+      "y": 180
+    },
+    "mbstate=xmax_zmin_hi": {
+      "model": "witherutils:block/rack/casing/case_null"
+    },
+    "mbstate=xmax_zmin_lo": {
+      "model": "witherutils:block/rack/casing/case_null"
+    },
+    "mbstate=xmax_zmin_yedge": {
+      "model": "witherutils:block/rack/casing/case_corner",
+      "y": 90
+    },
+    "mbstate=xmin_center": {
+      "model": "witherutils:block/rack/casing/case_null"
+    },
+    "mbstate=xmin_zmax_hi": {
+      "model": "witherutils:block/rack/casing/case_null"
+    },
+    "mbstate=xmin_zmax_lo": {
+      "model": "witherutils:block/rack/casing/case_null"
+    },
+    "mbstate=xmin_zmax_yedge": {
+      "model": "witherutils:block/rack/casing/case_corner",
+      "y": -90
+    },
+    "mbstate=xmin_zmin_hi": {
+      "model": "witherutils:block/rack/casing/case_null"
+    },
+    "mbstate=xmin_zmin_lo": {
+      "model": "witherutils:block/rack/casing/case_null"
+    },
+    "mbstate=xmin_zmin_yedge": {
+      "model": "witherutils:block/rack/casing/case_corner"
+    },
+    "mbstate=yedge": {
+      "model": "witherutils:block/rack/casing/case_null"
+    },
+    "mbstate=ymax_center": {
+      "model": "witherutils:block/rack/casing/case_null"
+    },
+    "mbstate=ymin_center": {
+      "model": "witherutils:block/rack/casing/case_null"
+    },
+    "mbstate=zedge": {
+      "model": "witherutils:block/rack/casing/case_null"
+    },
+    "mbstate=zmax_center": {
+      "model": "witherutils:block/rack/casing/case_null"
+    },
+    "mbstate=zmin_center": {
+      "model": "witherutils:block/rack/casing/case_null"
+    }
+  }
+}

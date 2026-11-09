@@ -150,53 +150,65 @@
             "apply": { "model": "witherutils:block/greenhouse/greenhouse_north_corner", "y": 0 }
         },
         {
+            "when": { "corner_north_west": "true" },
+            "apply": { "model": "witherutils:block/greenhouse/greenhouse_corner_rod", "y": 0 }
+        },
+        {
             "when": { "corner_north_east": "true" },
             "apply": { "model": "witherutils:block/greenhouse/greenhouse_north_corner", "y": 90 }
+        },
+        {
+            "when": { "corner_north_east": "true" },
+            "apply": { "model": "witherutils:block/greenhouse/greenhouse_corner_rod", "y": 90 }
         },
         {
             "when": { "corner_south_east": "true" },
             "apply": { "model": "witherutils:block/greenhouse/greenhouse_north_corner", "y": 180 }
         },
         {
+            "when": { "corner_south_east": "true" },
+            "apply": { "model": "witherutils:block/greenhouse/greenhouse_corner_rod", "y": 180 }
+        },
+        {
             "when": { "corner_south_west": "true" },
             "apply": { "model": "witherutils:block/greenhouse/greenhouse_north_corner", "y": 270 }
         },
         {
+            "when": { "corner_south_west": "true" },
+            "apply": { "model": "witherutils:block/greenhouse/greenhouse_corner_rod", "y": 270 }
+        },
+        {
             "when": { "AND": [
-                { "east": "true" },
                 { "north": "false" },
-                { "south": "true" },
                 { "west": "false" },
+                { "corner_north_west": "false" },
                 { "corner_rod": "true" }
             ]},
             "apply": { "model": "witherutils:block/greenhouse/greenhouse_corner_rod", "y": 0 }
         },
         {
             "when": { "AND": [
-                { "east": "false" },
                 { "north": "false" },
-                { "south": "true" },
-                { "west": "true" },
+                { "east": "false" },
+                { "corner_north_east": "false" },
                 { "corner_rod": "true" }
             ]},
             "apply": { "model": "witherutils:block/greenhouse/greenhouse_corner_rod", "y": 90 }
         },
         {
             "when": { "AND": [
-                { "east": "false" },
-                { "north": "true" },
                 { "south": "false" },
-                { "west": "true" },
+                { "east": "false" },
+                { "corner_south_east": "false" },
                 { "corner_rod": "true" }
             ]},
             "apply": { "model": "witherutils:block/greenhouse/greenhouse_corner_rod", "y": 180 }
         },
         {
             "when": { "AND": [
-                { "east": "true" },
-                { "north": "true" },
                 { "south": "false" },
                 { "west": "false" },
+                { "corner_south_west": "false" },
                 { "corner_rod": "true" }
             ]},
             "apply": { "model": "witherutils:block/greenhouse/greenhouse_corner_rod", "y": 270 }

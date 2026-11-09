@@ -1,9 +1,0 @@
-{
-	"parent": "block/cube_bottom_top",
-	"textures":
-	{
-		"bottom": "witherutils:blocks/rotten/rotten_planks",
-		"top": "witherutils:blocks/rotten/rotten_planks",
-		"side": "witherutils:blocks/rotten/rotten_planks"
-	}
-}

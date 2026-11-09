@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_steelingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "witherutils:withersteel_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "witherutils:steel_beam"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_steelingot"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "witherutils:steel_beam"
+    ]
+  }
+}

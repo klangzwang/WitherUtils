@@ -1,0 +1,4 @@
+newmtl texture1
+map_Kd witherutils:block/soulfire
+newmtl texture2
+map_Kd witherutils:block/soulfire

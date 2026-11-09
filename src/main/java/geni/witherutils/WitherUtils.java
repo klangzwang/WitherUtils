@@ -1,186 +1,123 @@
 package geni.witherutils;
 
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.util.UUID;
-import java.util.concurrent.CompletableFuture;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
-import com.mojang.authlib.GameProfile;
-
-import geni.witherutils.api.WitherUtilsRegistry;
-import geni.witherutils.api.lib.Names;
-import geni.witherutils.base.client.ClientHudEvents;
-import geni.witherutils.base.client.ClientSetup;
-import geni.witherutils.base.client.render.layer.ModelLayers;
-import geni.witherutils.base.common.CommonEventHandler;
-import geni.witherutils.base.common.WitherUtilsAPIHandler;
-import geni.witherutils.base.common.block.anvil.AnvilRecipeProvider;
-import geni.witherutils.base.common.block.cauldron.CauldronRecipeProvider;
-import geni.witherutils.base.common.config.BaseConfig;
-import geni.witherutils.base.common.entity.EntityEventHandler;
-import geni.witherutils.base.common.init.WUTAdapters;
-import geni.witherutils.base.common.init.WUTAttachments;
-import geni.witherutils.base.common.init.WUTBlockEntityTypes;
-import geni.witherutils.base.common.init.WUTBlocks;
-import geni.witherutils.base.common.init.WUTCapabilities;
-import geni.witherutils.base.common.init.WUTComponents;
-import geni.witherutils.base.common.init.WUTCreativeTab;
-import geni.witherutils.base.common.init.WUTCriterions;
-import geni.witherutils.base.common.init.WUTEffects;
-import geni.witherutils.base.common.init.WUTEntities;
-import geni.witherutils.base.common.init.WUTFluids;
-import geni.witherutils.base.common.init.WUTItems;
-import geni.witherutils.base.common.init.WUTMenus;
-import geni.witherutils.base.common.init.WUTParticles;
-import geni.witherutils.base.common.init.WUTRecipes;
-import geni.witherutils.base.common.init.WUTSounds;
-import geni.witherutils.base.common.item.ItemEventHandler;
-import geni.witherutils.base.common.item.cutter.CutterRecipeProvider;
-import geni.witherutils.base.data.generator.WitherUtilsAdvancements;
-import geni.witherutils.base.data.generator.WitherUtilsBlockModels;
-import geni.witherutils.base.data.generator.WitherUtilsBlockStates;
-import geni.witherutils.base.data.generator.WitherUtilsBlockTags;
-import geni.witherutils.base.data.generator.WitherUtilsFluidTags;
-import geni.witherutils.base.data.generator.WitherUtilsItemModels;
-import geni.witherutils.base.data.generator.WitherUtilsItemTags;
-import geni.witherutils.base.data.generator.WitherUtilsLanguages;
-import geni.witherutils.base.data.generator.WitherUtilsLootTables;
-import geni.witherutils.base.data.generator.recipes.WitherUtilsCraftingRecipes;
-import geni.witherutils.base.data.generator.recipes.WitherUtilsMachineRecipes;
-import geni.witherutils.core.common.fakeplayer.WUTFakePlayer;
+import com.mojang.logging.LogUtils;
+import geni.withercore.common.world.fluid.LiquidBlockTickManager;
+import geni.withercore.init.*;
+import geni.witherdata.generator.*;
+import geni.witherdata.generator.provider.WitherUtilsDataProvider;
+import geni.witherdata.recipes.AnvilRecipeProvider;
+import geni.witherdata.recipes.CutterRecipeProvider;
+import geni.witherutils.client.ClientSetup;
+import geni.witherutils.client.events.KeybindMappingEvents;
+import geni.witherutils.common.config.BaseConfig;
+import geni.witherutils.common.events.AnvilCauldronEvents;
+import geni.witherutils.common.events.HammerHandlerEvents;
+import geni.witherutils.common.world.level.block.AngelBlock;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
-import net.minecraft.server.level.ServerLevel;
+import net.minecraft.resources.ResourceLocation;
+import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.EventPriority;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
-import net.neoforged.fml.loading.FMLEnvironment;
 import net.neoforged.fml.loading.FMLPaths;
+import net.neoforged.neoforge.client.event.InputEvent;
 import net.neoforged.neoforge.common.NeoForge;
-import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
-import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
-import net.neoforged.neoforge.event.level.LevelEvent;
+import net.neoforged.neoforge.network.PacketDistributor;
+import org.slf4j.Logger;
 
-@Mod(Names.MODID)
+import java.io.IOException;
+import java.nio.file.Files;
+import java.util.Locale;
+import java.util.concurrent.CompletableFuture;
+
+@Mod(WitherUtils.MODID)
 public class WitherUtils {
 
-	public static final Logger LOGGER = LogManager.getLogger();
-	
-//	public static Regilite REGILITE = new Regilite(Names.MODID);
-    public static final GameProfile gameProfile = new GameProfile(UUID.nameUUIDFromBytes("mekanism.common".getBytes(StandardCharsets.UTF_8)), "faker");
-    
-    public WitherUtils(IEventBus modEventBus, ModContainer modContainer)
+    public static final String MODID = "witherutils";
+    public static final Logger LOGGER = LogUtils.getLogger();
+
+    public static ResourceLocation loc(String path)
     {
-        WitherUtilsRegistry.init(WitherUtilsAPIHandler.getInstance());
-		
-        try {
-            Files.createDirectories(FMLPaths.CONFIGDIR.get().resolve(Names.MODID));
-        } catch (IOException e) {
+        return ResourceLocation.fromNamespaceAndPath(MODID, path.toLowerCase(Locale.ROOT));
+    }
+
+    public WitherUtils(ModContainer modContainer, IEventBus modEventBus, Dist dist)
+    {
+        try
+        {
+            Files.createDirectories(FMLPaths.CONFIGDIR.get().resolve(MODID));
+        }
+        catch (IOException e)
+        {
             e.printStackTrace();
         }
 
         modContainer.registerConfig(ModConfig.Type.COMMON, BaseConfig.COMMON_SPEC, "witherutils/base-common.toml");
         modContainer.registerConfig(ModConfig.Type.CLIENT, BaseConfig.CLIENT_SPEC, "witherutils/base-client.toml");
-        
-        WUTCreativeTab.init(modEventBus);
 
+        if (dist.isClient())
+        {
+            ClientSetup.onModConstruction(modEventBus);
+            modEventBus.addListener(KeybindMappingEvents::onRegisterKeyMappings);
+        }
+
+        WUTCreativeTab.init(modEventBus);
         WUTSounds.SOUND_TYPES.register(modEventBus);
-        WUTBlocks.BLOCK_TYPES.register(modEventBus);
-        WUTItems.ITEM_TYPES.register(modEventBus);
-        WUTFluids.FLUIDS.register(modEventBus);
-        WUTFluids.FLUID_TYPES.register(modEventBus);
+        WUTBlocks.BLOCKS.register(modEventBus);
+        WUTBlockEntities.TILE_ENTITY_TYPES.register(modEventBus);
+        WUTMenus.MENUS.register(modEventBus);
+        WUTItems.ITEMS.register(modEventBus);
         WUTEntities.ENTITY_TYPES.register(modEventBus);
-        WUTParticles.PARTICLE_TYPES.register(modEventBus);
         WUTComponents.DATACOMP_TYPES.register(modEventBus);
-        WUTAttachments.ATTACHMENT_TYPES.register(modEventBus);
         WUTRecipes.RECIPE_TYPES.register(modEventBus);
         WUTRecipes.RECIPE_SERIALIZERS.register(modEventBus);
-        WUTMenus.MENU_TYPES.register(modEventBus);
-        WUTCriterions.TRIGGER_TYPES.register(modEventBus);
         WUTEffects.EFFECT_TYPES.register(modEventBus);
-        WUTBlockEntityTypes.BLOCK_ENTITY_TYPES.register(modEventBus);
-        WUTAdapters.ADAPTER_TYPES.register(modEventBus);
+        WUTFluids.FLUIDS.register(modEventBus);
+        WUTFluids.FLUID_TYPES.register(modEventBus);
 
-//        REGILITE.register(modEventBus);
-        
         modEventBus.addListener(WUTCapabilities::register);
         modEventBus.addListener(EventPriority.LOWEST, this::onGatherData);
 
-		if (FMLEnvironment.dist.isClient())
-		{
-	        modEventBus.register(new ClientHudEvents());
-			ModelLayers.init(modEventBus);
-			ClientSetup.onTextureStitch(modEventBus, ClientSetup::onTextureStitch);
-//			modEventBus.addListener(ModelLayers::onAddRenderLayers);
-//			modEventBus.addListener(ModelLayers::onAddLayers);
-			
-//	        NeoForge.EVENT_BUS.addListener((RenderLevelStageEvent event) -> {
-//	            if (event.getStage() == RenderLevelStageEvent.Stage.AFTER_LEVEL) {
-//	                ClientSetup.onRenderLast(event.getPoseStack(), event.getPartialTick().getGameTimeDeltaTicks());
-//	            }
-//	        });
-		}
-        
+        NeoForge.EVENT_BUS.addListener(
+            (InputEvent.Key e) -> AngelBlock.handleInput(PacketDistributor::sendToServer)
+        );
+
+        NeoForge.EVENT_BUS.register(LiquidBlockTickManager.class);
+
         IEventBus forgeBus = NeoForge.EVENT_BUS;
-        forgeBus.register(new CommonEventHandler());
-        forgeBus.register(new ItemEventHandler());
-        forgeBus.register(new EntityEventHandler());
-        forgeBus.addListener(EventPriority.HIGHEST, this::blockJoin);
-        forgeBus.addListener(this::onWorldUnload);
-        
-        LOGGER.info("Fake player readout: UUID = {}, name = {}", gameProfile.getId(), gameProfile.getName());
+        forgeBus.register(new AnvilCauldronEvents());
+        forgeBus.register(new HammerHandlerEvents());
     }
 
-    public void blockJoin(EntityJoinLevelEvent e)
+    public void onGatherData(GatherDataEvent event)
     {
-        if (e.getEntity() instanceof WUTFakePlayer)
-        	e.setCanceled(true);
-    }
-    
-    private void onWorldUnload(LevelEvent.Unload event)
-    {
-        if (event.getLevel() instanceof ServerLevel level)
-        {
-            WUTFakePlayer.releaseInstance(level);
-        }
-    }
-
-	public void onGatherData(GatherDataEvent event)
-	{
         DataGenerator generator = event.getGenerator();
         PackOutput packOutput = event.getGenerator().getPackOutput();
-        CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
+        CompletableFuture<HolderLookup.Provider> registries = event.getLookupProvider();
 
-        BlockTagsProvider blockTagsProvider = new WitherUtilsBlockTags(generator, lookupProvider, existingFileHelper);
-        generator.addProvider(event.includeServer(), blockTagsProvider);
+        WitherUtilsBlockTags blockTags = new WitherUtilsBlockTags(packOutput, registries, existingFileHelper);
+        generator.addProvider(event.includeServer(), blockTags);
+        generator.addProvider(event.includeServer(), new WitherUtilsItemTags(generator, registries, blockTags.contentsGetter(), existingFileHelper));
+        generator.addProvider(event.includeServer(), new WitherUtilsBlockStates(generator.getPackOutput(), existingFileHelper));
+        generator.addProvider(event.includeServer(), new WitherUtilsItemModels(generator, existingFileHelper));
+        generator.addProvider(event.includeServer(), new WitherUtilsCraftingRecipes(generator.getPackOutput(), registries));
+        generator.addProvider(event.includeClient(), new WitherUtilsLanguages(packOutput, WitherUtils.MODID, "en_us"));
+        generator.addProvider(event.includeClient(), new WitherUtilsSounds(packOutput, existingFileHelper));
+        generator.addProvider(event.includeServer(), new WitherUtilsLootTables(generator, registries));
 
-        generator.addProvider(event.includeServer(), new WitherUtilsItemTags(generator, lookupProvider, blockTagsProvider.contentsGetter(), existingFileHelper));
-        generator.addProvider(event.includeServer(), new WitherUtilsFluidTags(generator, lookupProvider, existingFileHelper));
-        
-        WitherUtilsBlockStates stateProvider = new WitherUtilsBlockStates(packOutput, existingFileHelper);
-        generator.addProvider(event.includeClient(), stateProvider);
-        generator.addProvider(event.includeClient(), new WitherUtilsBlockModels(generator.getPackOutput(), stateProvider));
-        generator.addProvider(event.includeServer(), new WitherUtilsCraftingRecipes(generator.getPackOutput(), lookupProvider));
-        generator.addProvider(event.includeClient(), new WitherUtilsItemModels(packOutput, existingFileHelper));
-        generator.addProvider(event.includeClient(), new WitherUtilsLanguages(packOutput, Names.MODID, "en_us"));
-        generator.addProvider(event.includeServer(), new WitherUtilsLootTables(generator, lookupProvider));
-        generator.addProvider(event.includeServer(), new WitherUtilsAdvancements(generator, lookupProvider, existingFileHelper));
-
-        WitherUtilsMachineRecipes provider = new WitherUtilsMachineRecipes("witherutils");
-        provider.addSubProvider(event.includeServer(), new AnvilRecipeProvider(packOutput, lookupProvider));
-        provider.addSubProvider(event.includeServer(), new CutterRecipeProvider(packOutput, lookupProvider));
-        provider.addSubProvider(event.includeServer(), new CauldronRecipeProvider(packOutput, lookupProvider));
-        
+        //
+        // EXTRA
+        //
+        WitherUtilsDataProvider provider = new WitherUtilsDataProvider("witherutils");
+        provider.addSubProvider(event.includeServer(), new AnvilRecipeProvider(packOutput, registries));
+        provider.addSubProvider(event.includeServer(), new CutterRecipeProvider(packOutput, registries));
         generator.addProvider(true, provider);
     }
 }

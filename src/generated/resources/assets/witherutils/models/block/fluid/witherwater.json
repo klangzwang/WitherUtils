@@ -1,7 +1,0 @@
-{
-  "render_type": "minecraft:translucent",
-  "textures": {
-    "particle": "witherutils:block/fluid/witherwater_still",
-    "particle2": "witherutils:block/fluid/witherwater_flow"
-  }
-}

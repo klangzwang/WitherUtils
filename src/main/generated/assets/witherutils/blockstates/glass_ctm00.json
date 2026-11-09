@@ -1,0 +1,15 @@
+{
+  "athena:loader": "athena:ctm",
+  "ctm_textures": {
+    "center": "witherutils:block/ctm/glass/ctm00/center",
+    "empty": "witherutils:block/ctm/glass/ctm00/empty",
+    "horizontal": "witherutils:block/ctm/glass/ctm00/horizontal",
+    "particle": "witherutils:block/ctm/glass/ctm00/particle",
+    "vertical": "witherutils:block/ctm/glass/ctm00/vertical"
+  },
+  "variants": {
+    "": {
+      "model": "witherutils:block/ctm/glass_ctm00"
+    }
+  }
+}

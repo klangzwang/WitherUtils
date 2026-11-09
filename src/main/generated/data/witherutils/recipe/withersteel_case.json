@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "minecraft:coal"
+    },
+    "P": {
+      "item": "witherutils:withersteel_plate"
+    }
+  },
+  "pattern": [
+    "CPC",
+    "P P",
+    "CPC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "witherutils:withersteel_case"
+  }
+}

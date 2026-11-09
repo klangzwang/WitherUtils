@@ -1,0 +1,14 @@
+{
+  "type": "witherutils:cutter",
+  "damage": 0.0,
+  "input": {
+    "item": "minecraft:dirt"
+  },
+  "output": {
+    "count": 1,
+    "id": "witherutils:dirt_ctm01"
+  },
+  "sound": {
+    "sound_id": "minecraft:block.grass.hit"
+  }
+}

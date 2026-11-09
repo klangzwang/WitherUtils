@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "witherutils:withersteel_case"
+    },
+    "G": {
+      "item": "witherutils:withersteel_gear"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "pattern": [
+    "   ",
+    "GCG",
+    "RRR"
+  ],
+  "result": {
+    "count": 1,
+    "id": "witherutils:wall_sensor"
+  }
+}

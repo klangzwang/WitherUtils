@@ -1,7 +1,0 @@
-{
-  "render_type": "minecraft:translucent",
-  "textures": {
-    "particle": "witherutils:block/fluid/portium_still",
-    "particle2": "witherutils:block/fluid/portium_flow"
-  }
-}

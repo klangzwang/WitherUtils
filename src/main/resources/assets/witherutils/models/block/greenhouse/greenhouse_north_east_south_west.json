@@ -1,7 +1,7 @@
 {
 	"credit": "witherutils",
 	"textures": {
-		"1": "witherutils:block/glass02",
+		"1": "witherutils:block/glass/glass02",
 		"particle": "witherutils:block/reservoir"
 	},
 	"elements": [

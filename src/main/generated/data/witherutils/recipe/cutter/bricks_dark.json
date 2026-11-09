@@ -1,0 +1,14 @@
+{
+  "type": "witherutils:cutter",
+  "damage": 0.0,
+  "input": {
+    "item": "minecraft:stone_bricks"
+  },
+  "output": {
+    "count": 1,
+    "id": "witherutils:bricks_dark"
+  },
+  "sound": {
+    "sound_id": "minecraft:block.stone.hit"
+  }
+}

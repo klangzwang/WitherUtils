@@ -1,0 +1,98 @@
+{
+  "bucket": {
+    "sounds": [
+      {
+        "name": "witherutils:bucket",
+        "stream": true
+      }
+    ]
+  },
+  "buzz": {
+    "sounds": [
+      "witherutils:buzz1",
+      "witherutils:buzz2"
+    ]
+  },
+  "doorclose": {
+    "sounds": [
+      "witherutils:doorclose"
+    ]
+  },
+  "dooropen": {
+    "sounds": [
+      "witherutils:dooropen"
+    ]
+  },
+  "dronebeepoff": {
+    "sounds": [
+      "witherutils:dronebeepoff"
+    ]
+  },
+  "dronebeepon": {
+    "sounds": [
+      "witherutils:dronebeepon"
+    ]
+  },
+  "droneidle": {
+    "sounds": [
+      "witherutils:droneidle"
+    ]
+  },
+  "dronestart": {
+    "sounds": [
+      "witherutils:dronestart"
+    ]
+  },
+  "dronestop": {
+    "sounds": [
+      "witherutils:dronestop"
+    ]
+  },
+  "hammerhit": {
+    "sounds": [
+      "witherutils:hammer01"
+    ]
+  },
+  "placeliquid": {
+    "sounds": [
+      "witherutils:place_liquid1",
+      "witherutils:place_liquid2",
+      "witherutils:place_liquid3"
+    ]
+  },
+  "placesteam": {
+    "sounds": [
+      "witherutils:place_steam1",
+      "witherutils:place_steam2"
+    ]
+  },
+  "placevar1": {
+    "sounds": [
+      "witherutils:place_var11",
+      "witherutils:place_var12",
+      "witherutils:place_var13",
+      "witherutils:place_var14"
+    ]
+  },
+  "placevar2": {
+    "sounds": [
+      "witherutils:place_var21",
+      "witherutils:place_var22",
+      "witherutils:place_var23",
+      "witherutils:place_var24"
+    ]
+  },
+  "placevar3": {
+    "sounds": [
+      "witherutils:place_var31",
+      "witherutils:place_var32",
+      "witherutils:place_var33",
+      "witherutils:place_var34"
+    ]
+  },
+  "shieldstrike": {
+    "sounds": [
+      "witherutils:shieldstrike"
+    ]
+  }
+}

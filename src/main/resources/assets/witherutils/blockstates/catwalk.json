@@ -2,184 +2,172 @@
     "multipart":
     [
         {
-            "when": { "AND": [
-                { "east": "false" },
-                { "north": "false" },
-                { "south": "false" },
-                { "west": "false" }
-            ]},
-			"apply":
-			[
-				{ "model": "witherutils:block/catwalk/catwalk_bordered", "weight": 10 },
-				{ "model": "witherutils:block/catwalk/catwalk_bordered_greeni", "weight": 8 }
-			]
+            "when": { "half": "top" },
+            "apply": { "model": "witherutils:block/catwalk/catwalk_north_east_south_west" }
         },
         {
-            "when": { "AND": [
-                { "east": "false" },
-                { "north": "true" },
-                { "south": "false" },
-                { "west": "false" }
-            ]},
-            "apply": { "model": "witherutils:block/catwalk/catwalk_north" }
+            "when": { "half": "bottom" },
+            "apply": { "model": "witherutils:block/catwalk/catwalk_north_east_south_west_bottom" }
         },
         {
-            "when": { "AND": [
-                { "east": "true" },
-                { "north": "false" },
-                { "south": "false" },
-                { "west": "false" }
-            ]},
-            "apply": { "model": "witherutils:block/catwalk/catwalk_east" }
+            "when": { "half": "top", "east": "false", "north": "false", "south": "false", "west": "false" },
+            "apply": { "model": "witherutils:block/catwalk/catwalk_bordered" }
         },
         {
-            "when": { "AND": [
-                { "east": "false" },
-                { "north": "false" },
-                { "south": "true" },
-                { "west": "false" }
-            ]},
-            "apply": { "model": "witherutils:block/catwalk/catwalk_south" }
+            "when": { "half": "bottom", "east": "false", "north": "false", "south": "false", "west": "false" },
+            "apply": { "model": "witherutils:block/catwalk/catwalk_bordered_bottom" }
         },
         {
-            "when": { "AND": [
-                { "east": "false" },
-                { "north": "false" },
-                { "south": "false" },
-                { "west": "true" }
-            ]},
-            "apply": { "model": "witherutils:block/catwalk/catwalk_west" }
+            "when": { "half": "top", "east": "false", "north": "true", "south": "false", "west": "false" },
+            "apply": { "model": "witherutils:block/catwalk/catwalk_north", "y": 0 }
         },
         {
-            "when": { "AND": [
-                { "east": "true" },
-                { "north": "true" },
-                { "south": "false" },
-                { "west": "false" }
-            ]},
-			"apply":
-			[
-				{ "model": "witherutils:block/catwalk/catwalk_ne", "weight": 10 },
-				{ "model": "witherutils:block/catwalk/catwalk_ne_greeni", "weight": 8 }
-			]
+            "when": { "half": "bottom", "east": "false", "north": "true", "south": "false", "west": "false" },
+            "apply": { "model": "witherutils:block/catwalk/catwalk_north_bottom", "y": 0 }
         },
         {
-            "when": { "AND": [
-                { "east": "false" },
-                { "north": "true" },
-                { "south": "false" },
-                { "west": "true" }
-            ]},
-			"apply":
-			[
-				{ "model": "witherutils:block/catwalk/catwalk_nw", "weight": 10 },
-				{ "model": "witherutils:block/catwalk/catwalk_nw_greeni", "weight": 8 }
-			]
+            "when": { "half": "top", "east": "true", "north": "false", "south": "false", "west": "false" },
+            "apply": { "model": "witherutils:block/catwalk/catwalk_north", "y": 90 }
         },
         {
-            "when": { "AND": [
-                { "east": "true" },
-                { "north": "false" },
-                { "south": "true" },
-                { "west": "false" }
-            ]},
-			"apply":
-			[
-				{ "model": "witherutils:block/catwalk/catwalk_es", "weight": 10 },
-				{ "model": "witherutils:block/catwalk/catwalk_es_greeni", "weight": 8 }
-			]
+            "when": { "half": "bottom", "east": "true", "north": "false", "south": "false", "west": "false" },
+            "apply": { "model": "witherutils:block/catwalk/catwalk_north_bottom", "y": 90 }
         },
         {
-            "when": { "AND": [
-                { "east": "false" },
-                { "north": "false" },
-                { "south": "true" },
-                { "west": "true" }
-            ]},
-			"apply":
-			[
-				{ "model": "witherutils:block/catwalk/catwalk_sw", "weight": 10 },
-				{ "model": "witherutils:block/catwalk/catwalk_sw_greeni", "weight": 8 }
-			]
+            "when": { "half": "top", "east": "false", "north": "false", "south": "true", "west": "false" },
+            "apply": { "model": "witherutils:block/catwalk/catwalk_north", "y": 180 }
         },
         {
-            "when": { "AND": [
-                { "east": "false" },
-                { "north": "true" },
-                { "south": "true" },
-                { "west": "false" }
-            ]},
-            "apply": { "model": "witherutils:block/catwalk/catwalk_ns" }
+            "when": { "half": "bottom", "east": "false", "north": "false", "south": "true", "west": "false" },
+            "apply": { "model": "witherutils:block/catwalk/catwalk_north_bottom", "y": 180 }
         },
         {
-            "when": { "AND": [
-                { "east": "true" },
-                { "north": "false" },
-                { "south": "false" },
-                { "west": "true" }
-            ]},
-            "apply": { "model": "witherutils:block/catwalk/catwalk_ew" }
+            "when": { "half": "top", "east": "false", "north": "false", "south": "false", "west": "true" },
+            "apply": { "model": "witherutils:block/catwalk/catwalk_north", "y": 270 }
         },
         {
-            "when": { "AND": [
-                { "east": "false" },
-                { "north": "true" },
-                { "south": "true" },
-                { "west": "true" }
-            ]},
-            "apply": { "model": "witherutils:block/catwalk/catwalk_new_alt", "y": 270 }
+            "when": { "half": "bottom", "east": "false", "north": "false", "south": "false", "west": "true" },
+            "apply": { "model": "witherutils:block/catwalk/catwalk_north_bottom", "y": 270 }
         },
         {
-            "when": { "AND": [
-                { "east": "true" },
-                { "north": "true" },
-                { "south": "true" },
-                { "west": "false" }
-            ]},
-            "apply": { "model": "witherutils:block/catwalk/catwalk_new_alt", "y": 90 }
+            "when": { "half": "top", "east": "true", "north": "true", "south": "false", "west": "false" },
+            "apply": { "model": "witherutils:block/catwalk/catwalk_north_east", "y": 0 }
         },
         {
-            "when": { "AND": [
-                { "east": "true" },
-                { "north": "true" },
-                { "south": "false" },
-                { "west": "true" }
-            ]},
-            "apply": { "model": "witherutils:block/catwalk/catwalk_new", "y": 0 }
+            "when": { "half": "bottom", "east": "true", "north": "true", "south": "false", "west": "false" },
+            "apply": { "model": "witherutils:block/catwalk/catwalk_north_east_bottom", "y": 0 }
         },
         {
-            "when": { "AND": [
-                { "east": "true" },
-                { "north": "false" },
-                { "south": "true" },
-                { "west": "true" }
-            ]},
-            "apply": { "model": "witherutils:block/catwalk/catwalk_new", "y": 180 }
+            "when": { "half": "top", "east": "true", "north": "false", "south": "true", "west": "false" },
+            "apply": { "model": "witherutils:block/catwalk/catwalk_north_east", "y": 90 }
         },
         {
-            "when": { "AND": [
-                { "east": "true" },
-                { "north": "true" },
-                { "south": "true" },
-                { "west": "true" }
-            ]},
-            "apply": { "model": "witherutils:block/catwalk/catwalk_nesw" }
+            "when": { "half": "bottom", "east": "true", "north": "false", "south": "true", "west": "false" },
+            "apply": { "model": "witherutils:block/catwalk/catwalk_north_east_bottom", "y": 90 }
         },
         {
-            "when": { "corner_north_west": "true" },
-            "apply": { "model": "witherutils:block/catwalk/catwalk_corner_nw" }
+            "when": { "half": "top", "east": "false", "north": "false", "south": "true", "west": "true" },
+            "apply": { "model": "witherutils:block/catwalk/catwalk_north_east", "y": 180 }
         },
         {
-            "when": { "corner_north_east": "true" },
-            "apply": { "model": "witherutils:block/catwalk/catwalk_corner_ne" }
+            "when": { "half": "bottom", "east": "false", "north": "false", "south": "true", "west": "true" },
+            "apply": { "model": "witherutils:block/catwalk/catwalk_north_east_bottom", "y": 180 }
         },
         {
-            "when": { "corner_south_east": "true" },
-            "apply": { "model": "witherutils:block/catwalk/catwalk_corner_se" }
+            "when": { "half": "top", "east": "false", "north": "true", "south": "false", "west": "true" },
+            "apply": { "model": "witherutils:block/catwalk/catwalk_north_east", "y": 270 }
         },
         {
-            "when": { "corner_south_west": "true" },
-            "apply": { "model": "witherutils:block/catwalk/catwalk_corner_sw" }
+            "when": { "half": "bottom", "east": "false", "north": "true", "south": "false", "west": "true" },
+            "apply": { "model": "witherutils:block/catwalk/catwalk_north_east_bottom", "y": 270 }
+        },
+        {
+            "when": { "half": "top", "east": "false", "north": "true", "south": "true", "west": "false" },
+            "apply": { "model": "witherutils:block/catwalk/catwalk_north_south", "y": 0 }
+        },
+        {
+            "when": { "half": "bottom", "east": "false", "north": "true", "south": "true", "west": "false" },
+            "apply": { "model": "witherutils:block/catwalk/catwalk_north_south_bottom", "y": 0 }
+        },
+        {
+            "when": { "half": "top", "east": "true", "north": "false", "south": "false", "west": "true" },
+            "apply": { "model": "witherutils:block/catwalk/catwalk_north_south", "y": 90 }
+        },
+        {
+            "when": { "half": "bottom", "east": "true", "north": "false", "south": "false", "west": "true" },
+            "apply": { "model": "witherutils:block/catwalk/catwalk_north_south_bottom", "y": 90 }
+        },
+        {
+            "when": { "half": "top", "east": "true", "north": "true", "south": "true", "west": "false" },
+            "apply": { "model": "witherutils:block/catwalk/catwalk_north_east_south", "y": 0 }
+        },
+        {
+            "when": { "half": "bottom", "east": "true", "north": "true", "south": "true", "west": "false" },
+            "apply": { "model": "witherutils:block/catwalk/catwalk_north_east_south_bottom", "y": 0 }
+        },
+        {
+            "when": { "half": "top", "east": "true", "north": "false", "south": "true", "west": "true" },
+            "apply": { "model": "witherutils:block/catwalk/catwalk_north_east_south", "y": 90 }
+        },
+        {
+            "when": { "half": "bottom", "east": "true", "north": "false", "south": "true", "west": "true" },
+            "apply": { "model": "witherutils:block/catwalk/catwalk_north_east_south_bottom", "y": 90 }
+        },
+        {
+            "when": { "half": "top", "east": "false", "north": "true", "south": "true", "west": "true" },
+            "apply": { "model": "witherutils:block/catwalk/catwalk_north_east_south", "y": 180 }
+        },
+        {
+            "when": { "half": "bottom", "east": "false", "north": "true", "south": "true", "west": "true" },
+            "apply": { "model": "witherutils:block/catwalk/catwalk_north_east_south_bottom", "y": 180 }
+        },
+        {
+            "when": { "half": "top", "east": "true", "north": "true", "south": "false", "west": "true" },
+            "apply": { "model": "witherutils:block/catwalk/catwalk_north_east_south", "y": 270 }
+        },
+        {
+            "when": { "half": "bottom", "east": "true", "north": "true", "south": "false", "west": "true" },
+            "apply": { "model": "witherutils:block/catwalk/catwalk_north_east_south_bottom", "y": 270 }
+        },
+        {
+            "when": { "half": "top", "corner_north_west": "true" },
+            "apply": { "model": "witherutils:block/catwalk/catwalk_north_corner", "y": 0 }
+        },
+        {
+            "when": { "half": "bottom", "corner_north_west": "true" },
+            "apply": { "model": "witherutils:block/catwalk/catwalk_north_corner_bottom", "y": 0 }
+        },
+        {
+            "when": { "half": "top", "corner_north_east": "true" },
+            "apply": { "model": "witherutils:block/catwalk/catwalk_north_corner", "y": 90 }
+        },
+        {
+            "when": { "half": "bottom", "corner_north_east": "true" },
+            "apply": { "model": "witherutils:block/catwalk/catwalk_north_corner_bottom", "y": 90 }
+        },
+        {
+            "when": { "half": "top", "corner_south_east": "true" },
+            "apply": { "model": "witherutils:block/catwalk/catwalk_north_corner", "y": 180 }
+        },
+        {
+            "when": { "half": "bottom", "corner_south_east": "true" },
+            "apply": { "model": "witherutils:block/catwalk/catwalk_north_corner_bottom", "y": 180 }
+        },
+        {
+            "when": { "half": "top", "corner_south_west": "true" },
+            "apply": { "model": "witherutils:block/catwalk/catwalk_north_corner", "y": 270 }
+        },
+        {
+            "when": { "half": "bottom", "corner_south_west": "true" },
+            "apply": { "model": "witherutils:block/catwalk/catwalk_north_corner_bottom", "y": 270 }
+        },
+        {
+            "when": { "beamconn": "true", "east": "true", "north": "false", "south": "false", "west": "true" },
+            "apply": { "model": "witherutils:block/catwalk/catwalk_beamconn", "y": 90 }
+        },
+        {
+            "when": { "beamconn": "true", "east": "false", "north": "true", "south": "true", "west": "false" },
+            "apply": { "model": "witherutils:block/catwalk/catwalk_beamconn" }
         }
     ]
 }

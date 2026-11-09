@@ -1,12 +1,3 @@
 {
-	"parent": "witherutils:block/greenhouse/greenhouse_bordered",
-	"display":
-	{
-		"gui":
-		{
-			"rotation": [30, 225, 0],
-			"translation": [0, 3.5, 0],
-			"scale": [0.625, 0.625, 0.625]
-		}
-	}
+	"parent": "witherutils:block/greenhouse/greenhouse_bordered"
 }

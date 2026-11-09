@@ -1,0 +1,16 @@
+{
+  "type": "witherutils:anvil",
+  "bonus": 1,
+  "count": 4,
+  "hitcounter": 3,
+  "input": {
+    "item": "minecraft:stone_bricks"
+  },
+  "output": {
+    "count": 1,
+    "id": "minecraft:stone"
+  },
+  "sound": {
+    "sound_id": "witherutils:hammerhit"
+  }
+}

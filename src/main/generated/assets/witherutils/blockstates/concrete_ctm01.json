@@ -1,0 +1,15 @@
+{
+  "athena:loader": "athena:ctm",
+  "ctm_textures": {
+    "center": "witherutils:block/ctm/concrete/ctm01/center",
+    "empty": "witherutils:block/ctm/concrete/ctm01/empty",
+    "horizontal": "witherutils:block/ctm/concrete/ctm01/horizontal",
+    "particle": "witherutils:block/ctm/concrete/ctm01/particle",
+    "vertical": "witherutils:block/ctm/concrete/ctm01/vertical"
+  },
+  "variants": {
+    "": {
+      "model": "witherutils:block/ctm/concrete_ctm01"
+    }
+  }
+}

@@ -1,8 +1,0 @@
-{
-	"parent": "block/cube_all",
-	"textures":
-	{
-		"all": "witherutils:blocks/rotten/rotten_log",
-		"particle": "witherutils:blocks/rotten/rotten_log"
-	}
-}

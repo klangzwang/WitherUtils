@@ -1,0 +1,16 @@
+{
+  "type": "witherutils:anvil",
+  "bonus": 0,
+  "count": 4,
+  "hitcounter": 3,
+  "input": {
+    "item": "minecraft:iron_ingot"
+  },
+  "output": {
+    "count": 1,
+    "id": "witherutils:withersteel_nugget"
+  },
+  "sound": {
+    "sound_id": "witherutils:hammerhit"
+  }
+}

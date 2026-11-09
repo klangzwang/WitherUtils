@@ -1,6 +1,0 @@
-{
-  "parent": "witherutils:item/withertools",
-  "textures": {
-    "layer0": "witherutils:item/sword_powered"
-  }
-}

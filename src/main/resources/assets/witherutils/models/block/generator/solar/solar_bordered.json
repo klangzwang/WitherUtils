@@ -1,9 +1,9 @@
 {
 	"credit": "witherutils",
 	"textures": {
-		"1": "witherutils:block/machine/machine06",
-		"particle": "witherutils:block/machine/machine34",
-		"mesh": "witherutils:block/machine/machine34"
+		"1": "witherutils:block/shared/full16",
+		"particle": "witherutils:block/shared/full11",
+		"mesh": "witherutils:block/shared/full11"
 	},
 	"elements": [
 		{
@@ -35,7 +35,7 @@
 				"east": {"uv": [0, 6.5, 3, 8.5], "texture": "#1", "tintindex": 0},
 				"south": {"uv": [0, 0, 1, 1], "texture": "#mesh", "tintindex": 0},
 				"west": {"uv": [0, 6.5, 3, 8.5], "texture": "#1", "tintindex": 0},
-				"up": {"uv": [0, 1.5, 2, 3.5], "rotation": 90, "texture": "#1", "tintindex": 0},
+				"up": {"uv": [0.5, 1.5, 1.5, 2.5], "rotation": 90, "texture": "#1", "tintindex": 0},
 				"down": {"uv": [0, 0, 1, 1], "rotation": 180, "texture": "#mesh", "tintindex": 0}
 			}
 		},
@@ -59,7 +59,7 @@
 				"east": {"uv": [0, 0, 1, 1], "texture": "#mesh", "tintindex": 0},
 				"south": {"uv": [0, 6.5, 3, 8.5], "texture": "#1", "tintindex": 0},
 				"west": {"uv": [0, 0, 1, 1], "texture": "#mesh", "tintindex": 0},
-				"up": {"uv": [0, 1.5, 2, 3.5], "rotation": 180, "texture": "#1", "tintindex": 0},
+				"up": {"uv": [0.5, 1.5, 1.5, 2.5], "rotation": 180, "texture": "#1", "tintindex": 0},
 				"down": {"uv": [0, 0, 1, 1], "rotation": 90, "texture": "#mesh", "tintindex": 0}
 			}
 		},
@@ -83,7 +83,7 @@
 				"east": {"uv": [0, 6.5, 3, 8.5], "texture": "#1", "tintindex": 0},
 				"south": {"uv": [0, 0, 1, 1], "texture": "#mesh", "tintindex": 0},
 				"west": {"uv": [0, 6.5, 3, 8.5], "texture": "#1", "tintindex": 0},
-				"up": {"uv": [0, 1.5, 2, 3.5], "rotation": 270, "texture": "#1", "tintindex": 0},
+				"up": {"uv": [0.5, 1.5, 1.5, 2.5], "rotation": 270, "texture": "#1", "tintindex": 0},
 				"down": {"uv": [0, 0, 1, 1], "texture": "#mesh", "tintindex": 0}
 			}
 		},
@@ -107,7 +107,7 @@
 				"east": {"uv": [0, 0, 1, 1], "texture": "#mesh", "tintindex": 0},
 				"south": {"uv": [0, 6.5, 3, 8.5], "texture": "#1", "tintindex": 0},
 				"west": {"uv": [0, 0, 1, 1], "texture": "#mesh", "tintindex": 0},
-				"up": {"uv": [0, 1.5, 2, 3.5], "texture": "#1", "tintindex": 0},
+				"up": {"uv": [0.5, 1.5, 1.5, 2.5], "texture": "#1", "tintindex": 0},
 				"down": {"uv": [0, 0, 1, 1], "rotation": 270, "texture": "#mesh", "tintindex": 0}
 			}
 		}

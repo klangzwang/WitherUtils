@@ -1,7 +1,0 @@
-{
-  "render_type": "minecraft:translucent",
-  "textures": {
-    "particle": "witherutils:block/fluid/redresin_still",
-    "particle2": "witherutils:block/fluid/redresin_flow"
-  }
-}

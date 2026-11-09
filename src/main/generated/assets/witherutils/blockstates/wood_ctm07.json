@@ -1,0 +1,15 @@
+{
+  "athena:loader": "athena:ctm",
+  "ctm_textures": {
+    "center": "witherutils:block/ctm/wood/ctm07/center",
+    "empty": "witherutils:block/ctm/wood/ctm07/empty",
+    "horizontal": "witherutils:block/ctm/wood/ctm07/horizontal",
+    "particle": "witherutils:block/ctm/wood/ctm07/particle",
+    "vertical": "witherutils:block/ctm/wood/ctm07/vertical"
+  },
+  "variants": {
+    "": {
+      "model": "witherutils:block/ctm/wood_ctm07"
+    }
+  }
+}

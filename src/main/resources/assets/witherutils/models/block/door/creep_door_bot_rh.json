@@ -1,7 +1,0 @@
-{
-    "parent": "witherutils:block/door_bot_rh",
-    "textures": {
-        "bottom": "witherutils:block/door/creep_door_lower",
-		"particle": "witherutils:block/door/creep_door_lower"
-    }
-}

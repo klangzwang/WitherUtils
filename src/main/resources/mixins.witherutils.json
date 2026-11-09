@@ -1,12 +1,15 @@
 {
 	"required": true,
-	"package": "geni.witherutils.core.mixin",
-	"compatibilityLevel": "JAVA_17",
+	"minVersion": "0.8",
+	"package": "geni.withercore.mixin",
+	"compatibilityLevel": "JAVA_21",
 	"refmap": "mixins.witherutils.refmap.json",
+	"target": "@env(DEFAULT)",
 	"client": [
+		"LiquidBlockRendererMixin"
 	],
 	"mixins": [
-		"BlockEntityTypeAccess"
-	],
-	"minVersion": "0.8"
+		"SignalGetterMixin",
+		"BlockBehaviourPropertiesMixin"
+	]
 }

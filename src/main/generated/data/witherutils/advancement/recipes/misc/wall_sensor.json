@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_smallcase": {
+      "conditions": {
+        "items": [
+          {
+            "items": "witherutils:withersteel_case"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "witherutils:wall_sensor"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_smallcase"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "witherutils:wall_sensor"
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:iron_bars"
+    },
+    "C": {
+      "item": "witherutils:soulbank_case"
+    },
+    "D": {
+      "item": "minecraft:daylight_detector"
+    },
+    "P": {
+      "item": "witherutils:withersteel_plate"
+    }
+  },
+  "pattern": [
+    "   ",
+    "BPB",
+    "CDC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "witherutils:solar_case"
+  }
+}

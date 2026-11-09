@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_soulbankbasic": {
+      "conditions": {
+        "items": [
+          {
+            "items": "witherutils:soulbank_basic"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "witherutils:soulbank_adv"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_soulbankbasic"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "witherutils:soulbank_adv"
+    ]
+  }
+}

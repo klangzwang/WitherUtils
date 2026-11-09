@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "witherutils:dirt_ctm02"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "witherutils:blocks/dirt_ctm02"
+}
